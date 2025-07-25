@@ -1,0 +1,11 @@
+.tours{
+    padding-top: 100px;
+    min-height: 200vh;
+}
+
+.tours__list{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}

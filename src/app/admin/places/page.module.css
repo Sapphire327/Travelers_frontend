@@ -1,0 +1,29 @@
+.places{
+
+}
+.placesList{
+    margin: auto;
+    max-width: 500px;
+}
+.placesList__element{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--input-color);
+    padding: 10px;
+}
+.placesList__name{
+    color: white;
+    font-size: 20px;
+}
+.placeList__link{
+    width: 150px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+.createButton{
+    margin: 50px auto auto;
+    width: 250px;
+    font-size: 16px;
+    border-radius: 6px;
+}

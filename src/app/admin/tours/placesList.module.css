@@ -1,0 +1,41 @@
+
+.placesList{
+    border: 1px solid var(--input-color);
+}
+.placesList__info{
+    /*display: grid;*/
+    /*grid-template-columns: repeat(3, 1fr);*/
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 10px 10px;
+
+}
+.placesList__name{
+    color: white;
+    font-size: 20px;
+}
+.placeList__link{
+    width: 180px;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-left: auto;
+}
+.placesList__applications{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.placeList__applicationListBtn{
+    width: 180px !important;
+    font-size: 16px !important;
+    border-radius: 6px !important;
+    margin-left: auto !important;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.placesList__applicationsList{
+    margin: 20px 0;
+}
+.placesList__text{
+    color: white;
+}

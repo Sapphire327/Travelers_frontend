@@ -1,0 +1,9 @@
+.backgroundStick{
+    background:
+            linear-gradient(0deg, rgba(255, 255, 255, 0) 0px,  var(--main-bg-color) 40px) 0 0 / 100% 40px no-repeat,
+            linear-gradient(180deg, rgba(255, 255, 255, 0) 0px,  var(--main-bg-color) 40px) 0 100% / 100% 40px no-repeat,
+            linear-gradient(90deg, rgba(21, 28, 36, 0) 40%, var(--main-bg-color) ) calc(-960px + 20vw) 0 / 970px auto no-repeat,
+            linear-gradient(270deg,  rgba(21, 28, 36, 0) 40%, var(--main-bg-color)) calc(100% + 960px - 20vw ) 0 / 970px auto no-repeat,
+            url("/backgrounds/3.png") calc(-960px + 20vw) 107% / 965px auto repeat-y,
+            url("/backgrounds/3.png")  calc(100% + 960px - 20vw ) 0 / 965px auto repeat-y;
+}

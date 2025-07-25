@@ -1,0 +1,72 @@
+.applications{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.application{
+    max-width: 600px;
+    width: 100%;
+    color: white;
+    border: 5px solid var(--input-color);
+    border-radius: 15px;
+    padding: 20px;
+    font-weight: normal;
+}
+.application__top{
+    display: flex;
+    justify-content: space-between;
+}
+.application__openBtn{
+    transition: all 0.4s ease;
+}
+.application__openBtn:hover{
+    transform: scale(1.5);
+}
+.application__openBtn.active:hover{
+    transform: scale(1.5) rotate(180deg);
+}
+.application__openBtn.active{
+    transform: rotate(180deg);
+}
+.application__content{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /*height: 0px;*/
+    height: auto;
+    max-height: 0;
+    overflow-y: clip;
+    transition: all 0.4s ease-in-out;
+}
+.application__content.active{
+    /*height: %400px;*/
+    max-height: 400px;
+    margin-top: 50px;
+}
+.buttons{
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+.button{
+    font-size: 16px;
+    width: 200px;
+}
+.deleteButton{
+    background-color: var(--red)!important;
+}
+.deleteButton:hover{
+    background-color: var(--red)!important;
+}
+@media (max-width: 650px) {
+    .buttons{
+        flex-direction: column;
+        gap: 12px;
+    }
+    .button{
+        width: 100%!important;
+        height: 50px!important;
+    }
+}

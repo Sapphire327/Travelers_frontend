@@ -1,0 +1,22 @@
+.footer{
+    height: 200px;
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: var(--input-color) solid 5px;
+    /*margin-top: 200px;*/
+}
+
+.footer__title,.footer__text{
+    font-size: 16px;
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+.footer__title{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 28px;
+    font-family: sans-serif;
+}

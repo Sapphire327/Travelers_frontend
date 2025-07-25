@@ -1,0 +1,21 @@
+.card{
+    max-width: 311px;
+    aspect-ratio: 311/424;
+    position: relative;
+    margin: auto;
+    user-select: none;
+}
+.card__img{
+    border-radius: 20px;
+    height: 100%;
+    object-fit: cover;
+}
+.card__text{
+    position: absolute;
+    text-align: center;
+    bottom: 15px;
+    color: white;
+    width: 100%;
+    z-index: 1;
+    font-size: 24px;
+}

@@ -1,0 +1,31 @@
+.form{
+    margin: 60px auto auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.groupTwoInput{
+    display: flex;
+    gap: 30px;
+    margin: auto;
+}
+.sendButton,.deleteButton{
+    font-size: 22px!important;
+    height: 60px!important;
+    margin: 20px auto auto!important;
+}
+.linkInput{
+    width: 100%;
+    border-radius: 0px 0px 15px 15px!important;
+}
+.select_top{
+    border-radius: 15px 15px 0 0 !important;
+}
+.deleteButton{
+    background-color: var(--red)!important;
+}
+.deleteButton:hover{
+    background-color: var(--red)!important;
+}

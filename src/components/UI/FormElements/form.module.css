@@ -1,0 +1,70 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--second-color);
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    aspect-ratio: 9/2;
+    height: auto;
+    transition: all 0.2s ease 0s;
+    min-width:140px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+.button_big{
+    font-size: clamp(20px,3vw,32px);
+    border-radius: 20px;
+    /*width: 300px;*/
+
+}
+.button:hover{
+    transform: scale(1.05);
+    background-color: var(--second-hover-color);
+}
+
+/**/
+.inputWrap{
+    position: relative;
+}
+.inputWrap__label{
+    position: absolute;
+    top: -19px;
+    font-size: 14px;
+    color: white;
+    left: 10px;
+    font-weight: lighter;
+}
+.input,.select{
+    display: block;
+    border: 5px solid var(--input-color);
+    border-radius: 15px;
+    padding: 9px 16px;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    color-scheme: dark;
+}
+
+.select>option{
+    display: block;
+    background-color: var(--main-bg-color);
+    border: 5px solid var(--input-color);
+}
+.textarea {
+    resize: none;
+    outline: none;
+}
+/*select{*/
+
+/*}*/
+
+
+/*input:-webkit-autofill,*/
+/*input:-webkit-autofill:hover,*/
+/*input:-webkit-autofill:focus,*/
+/*input:-webkit-autofill:active  {*/
+/*    !*box-shadow: 0 0 0 30px var(--main-bg-color) inset !important;*!*/
+/*    transition: all 5000s ease-in-out 50000s;*/
+/*}*/

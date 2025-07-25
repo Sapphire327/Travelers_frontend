@@ -1,0 +1,10 @@
+.placesList{
+    margin: auto;
+    max-width: 600px;
+}
+.createButton{
+    margin: 50px auto auto;
+    width: 250px;
+    font-size: 16px;
+    border-radius: 6px;
+}

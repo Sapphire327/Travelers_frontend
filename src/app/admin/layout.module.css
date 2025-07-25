@@ -1,0 +1,22 @@
+.content{
+    padding-top: 100px;
+    min-height: 100vh;
+}
+.panel__button{
+    font-size: 28px;
+}
+.panel{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.childrens{
+    margin-top: 24px;
+}
+@media (max-width: 400px) {
+    .panel {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+}

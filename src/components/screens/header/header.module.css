@@ -1,0 +1,119 @@
+.header{
+    /*background:linear-gradient(to bottom, rgba(135, 141, 195, 0.16), rgba(65, 67, 93, 0.16));*/
+    position: fixed;
+    top: 0;
+    height:80px;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+}
+.header__burger {
+    display: none;
+}
+.header__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 20px;
+    height: 100%;
+    width: clamp(500px,95vw,900px);
+    position: relative;
+    padding-bottom: 15px;
+    top: -20px;
+}
+.header__linkList{
+    display: flex;
+    gap: 20px;
+}
+.header__link{
+    display:block;
+    font-size: clamp(24px,2.4vw,28px);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header__body{
+        width: 100%;
+        flex-direction: column;
+        /*top: -100vh;*/
+        top: 0;
+        opacity: 0;
+        justify-content: flex-start;
+        padding-top: 25vh;
+        align-items: center;
+        backdrop-filter: blur(8px);
+        border-radius: 0;
+        transition: opacity 0.2s ease 0s;
+        display: none;
+    }
+    .header__body.active{
+        top: 0;
+        opacity: 1;
+        display: block;
+    }
+    .header__linkList{
+        flex-direction: column;
+    }
+    .header__link{
+        font-size: 6vw;
+        width: 100%;
+    }
+    .logo{
+        margin-bottom: 20px;
+    }
+    .header{
+        height: 60px;
+        z-index: 15;
+        transition: height 0.2s ease 0s;
+    }
+    .header.active{
+        height: 100vh;
+    }
+
+    .header__nav{
+        width: 100%;
+    }
+    /*burger    */
+    .header__burger{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 20px;
+        z-index: 13;
+    }
+    .header__burger:before,
+    .header__burger:after{
+        content: '';
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger span{
+        position: absolute;
+        background-color: white;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger:before{
+        top: 0;
+    }
+    .header__burger:after{
+        bottom: 1px;
+    }
+    .header__burger.active:before{transform:rotate(45deg); top: 9px;}
+    .header__burger.active:after{transform:rotate(-45deg); bottom: 9px;}
+    .header__burger.active span{transform:scale(0);}
+
+}

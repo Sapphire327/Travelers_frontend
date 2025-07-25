@@ -1,0 +1,19 @@
+.login{
+    padding-top:  200px;
+    min-height: 100vh;
+}
+.login__form{
+    margin: auto;
+    max-width: 400px;
+}
+.login__button{
+    width:140px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+.login__inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 20px;
+}

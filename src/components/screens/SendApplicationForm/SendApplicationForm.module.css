@@ -1,0 +1,15 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    max-width: 500px;
+}
+
+.form__elem{
+
+}
+.sendButton{
+    font-size: 24px !important;
+    height: 60px !important;
+}

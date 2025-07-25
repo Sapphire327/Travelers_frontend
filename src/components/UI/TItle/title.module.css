@@ -1,0 +1,5 @@
+.title{
+    font-size: clamp(32px,5vw,48px);
+    color: white;
+    text-align: center;
+}
