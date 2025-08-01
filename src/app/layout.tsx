@@ -14,8 +14,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Travelers",
-  description: "Туры",
+    title: "Travelers",
+    description: "Путешествие — это возможность открыть новые горизонты, испытать себя и насладиться красотой природы. Мы предлагаем вам отправиться в незабываемые путешествия по живописным уголкам нашей страны",
+    openGraph: {
+        title: 'Travelers',
+        description: "Путешествие — это возможность открыть новые горизонты, испытать себя и насладиться красотой природы. Мы предлагаем вам отправиться в незабываемые путешествия по живописным уголкам нашей страны",
+        url: 'https://sapphire.ru ',
+        siteName: 'Travelers',
+        images: [{ url: 'https://sapphire327.ru/backgrounds/main.png' }]
+    },
+
 };
 
 export default function RootLayout({
