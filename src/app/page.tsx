@@ -19,7 +19,7 @@ export default function Home() {
             <div className={clsx('grid', styles.top)}>
                 <h1 className={styles.top__title}>ВЫБЕРИ<br/>СВОЙ ПУТЬ<br/>К ПРИРОДЕ</h1>
                 <div className={styles.top__links}>
-                    <Link className={clsx(styles.top__go)} href={'/'}>Go с нами</Link>
+                    <Link className={clsx(styles.top__go)} href={'/tours'}>Go с нами</Link>
                     <TgIcon href={'https://web.telegram.org/k/'} alt={''}></TgIcon>
                 </div>
             </div>
