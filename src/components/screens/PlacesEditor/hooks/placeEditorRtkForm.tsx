@@ -1,14 +1,14 @@
-import {SubmitHandler, useForm} from "react-hook-form";
+import { getMessageFromError } from "@/store/helpers/errorPredicates"
 import {
     useChangePlaceMutation,
     useCreatePlaceMutation,
     useDeletePlaceMutation,
     useGetPlaceByIdQuery
-} from "@/store/places/placesApiSlice";
-import {ChangeEvent, useEffect, useState} from "react";
-import {toast} from "react-toastify";
-import {getMessageFromError, isErrorWithZodErrors} from "@/store/helpers/errorPredicates";
-import {useRouter} from "next/navigation";
+} from "@/store/places/placesApiSlice"
+import { useRouter } from "next/navigation"
+import { ChangeEvent, useEffect, useState } from "react"
+import { SubmitHandler, useForm } from "react-hook-form"
+import { toast } from "react-toastify"
 type FormValues = {
     preview?: FileList
     images: File[]
@@ -39,7 +39,7 @@ export const placeEditorRtkForm = ({id}: IProps) => {
     const images = watch('images');
     const [urlLocalImages, setUrlLocalImages] = useState<Map<File, string>>(new Map())
 
-    const imgServerUrl = process.env.NEXT_PUBLIC_SERVER_IMAGE_URL || ''
+    const imgServerUrl =  process.env.NEXT_PUBLIC_SERVER_IMAGE_URL?process.env.NEXT_PUBLIC_SERVER_IMAGE_URL +'/': ''
     const [createPlace, {isSuccess}] = useCreatePlaceMutation()
     const [changePlace] = useChangePlaceMutation()
     const [deletePlace] = useDeletePlaceMutation()
@@ -60,7 +60,7 @@ export const placeEditorRtkForm = ({id}: IProps) => {
             setValue('description', data.description)
             setValue('mapCode', data.mapCode)
             setValue('otherInfo', data.otherInfo)
-            setPreviewImages(imgServerUrl + '/' + data.preview)
+            setPreviewImages(imgServerUrl + data.preview)
             if (data.images)
                 setGalleryImagesFromServer(data.images)
         }

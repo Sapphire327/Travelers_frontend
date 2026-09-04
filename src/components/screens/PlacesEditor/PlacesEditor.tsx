@@ -1,16 +1,15 @@
 'use client'
-import styles from "./placesEditor.module.css";
-import {FC, useState} from 'react'
-import ImageLoader from "@/components/UI/imageLoader/ImageLoader";
-import clsx from "clsx";
-import Loader from "@/components/UI/Loader/Loader";
-import {useRouter} from "next/navigation";
-import ConfirmModal from "@/components/UI/ConfirmModal/ConfirmModal";
-import Input from "@/components/UI/FormElements/Input";
-import TextArea from "@/components/UI/FormElements/TextArea";
-import {placeEditorRtkForm} from "@/components/screens/PlacesEditor/hooks/placeEditorRtkForm";
-import Link from "next/link";
-import Button from "@/components/UI/FormElements/Button";
+import ConfirmModal from "@/components/UI/ConfirmModal/ConfirmModal"
+import Button from "@/components/UI/FormElements/Button"
+import Input from "@/components/UI/FormElements/Input"
+import TextArea from "@/components/UI/FormElements/TextArea"
+import Loader from "@/components/UI/Loader/Loader"
+import ImageLoader from "@/components/UI/imageLoader/ImageLoader"
+import { placeEditorRtkForm } from "@/components/screens/PlacesEditor/hooks/placeEditorRtkForm"
+import clsx from "clsx"
+import Link from "next/link"
+import { FC, useState } from 'react'
+import styles from "./placesEditor.module.css"
 interface IProps {
     id?: number
 }
@@ -56,7 +55,7 @@ const PlacesEditor: FC<IProps> = ({id}) => {
                                 return (
                                     <div key={value}  className={clsx(styles.gallery__img, isOnDelete && styles.imgOnDelete)}>
                                         {!isOnDelete && <button onClick={() => deleteServerImg(value)} className={styles.gallery__DeleteBtn}>X</button>}
-                                        <img src={imgServerUrl + '/' + value} alt=""/>
+                                        <img src={imgServerUrl + value} alt=""/>
                                         {isOnDelete && <button onClick={() => cancelServerImg(value)}  className={clsx('button', styles.cancelDeleteButton)}>Отменить удаление</button>}
                                     </div>)
                             })}

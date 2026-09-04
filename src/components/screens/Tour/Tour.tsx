@@ -1,16 +1,18 @@
 'use client'
+import SendApplicationForm from "@/components/screens/SendApplicationForm/SendApplicationForm"
+import Loader from "@/components/UI/Loader/Loader"
+import Title from "@/components/UI/TItle/Title"
+import { useGetPublicTourByIdQuery } from "@/store/tours/toursApiSlice"
+import clsx from "clsx"
 import { FC } from 'react'
-import styles from "./tour.module.css";
-import Title from "@/components/UI/TItle/Title";
-import clsx from "clsx";
-import Loader from "@/components/UI/Loader/Loader";
-import {useGetPublicTourByIdQuery} from "@/store/tours/toursApiSlice";
-import SendApplicationForm from "@/components/screens/SendApplicationForm/SendApplicationForm";
+import styles from "./tour.module.css"
 
 
 
 const tour:FC<{id:number}> = ({id}) => {
     const {data} = useGetPublicTourByIdQuery(+id)
+    const imgUrl = process.env.NEXT_PUBLIC_SERVER_IMAGE_URL? process.env.NEXT_PUBLIC_SERVER_IMAGE_URL+'/':''
+
     return (
         <div style={{marginBottom:"100px"}}>
             {data?<div className='container'>
@@ -18,7 +20,7 @@ const tour:FC<{id:number}> = ({id}) => {
                     <Title text={data.place.name}/>
                     <p className={styles.text}>{data.place.description}</p>
                     <div className={styles.gallery}>
-                        {data.place.images&&data.place.images.map((img,i)=><img className={styles.gallery__img} key={i} src={process.env.NEXT_PUBLIC_SERVER_IMAGE_URL+'/'+img} alt={''}></img>)}
+                        {data.place.images&&data.place.images.map((img,i)=><img className={styles.gallery__img} key={i} src={imgUrl} alt={''}></img>)}
                     </div>
                     <div className={styles.tour__map}>
                         <Title text='Маршрут'/>
