@@ -20,7 +20,7 @@ const tour:FC<{id:number}> = ({id}) => {
                     <Title text={data.place.name}/>
                     <p className={styles.text}>{data.place.description}</p>
                     <div className={styles.gallery}>
-                        {data.place.images&&data.place.images.map((img,i)=><img className={styles.gallery__img} key={i} src={imgUrl} alt={''}></img>)}
+                        {data.place.images&&data.place.images.map((img,i)=><img className={styles.gallery__img} key={i} src={imgUrl+img} alt={''}></img>)}
                     </div>
                     <div className={styles.tour__map}>
                         <Title text='Маршрут'/>
